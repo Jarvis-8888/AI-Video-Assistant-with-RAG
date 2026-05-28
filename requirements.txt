@@ -3,8 +3,8 @@ pydub
 ffmpeg-python
 
 openai-whisper
-torch==2.2.2
-torchaudio==2.2.2
+torch
+torchaudio
 
 deep-translator
 
@@ -31,5 +31,3 @@ python-dotenv
 numpy
 tqdm
 requests
-setuptools
-wheel
