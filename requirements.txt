@@ -35,3 +35,10 @@ requests
 torch
 torchaudio
 torchvision
+
+chromadb
+langchain-chroma
+sentence-transformers
+langchain-huggingface
+huggingface-hub
+tiktoken
