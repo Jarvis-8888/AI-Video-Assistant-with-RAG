@@ -31,3 +31,7 @@ python-dotenv
 numpy
 tqdm
 requests
+
+torch
+torchaudio
+torchvision
