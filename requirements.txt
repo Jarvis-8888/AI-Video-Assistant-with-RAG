@@ -1,5 +1,5 @@
 yt-dlp
-pydub
+
 ffmpeg-python
 
 openai-whisper
