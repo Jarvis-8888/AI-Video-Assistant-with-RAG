@@ -29,28 +29,28 @@ def download_youtube_audio(url: str) -> str:
     output_path = os.path.join(DOWNLOAD_DIR, "%(title)s.%(ext)s")
 
     ydl_opts = {
-        "format": "bestaudio[ext=m4a]/bestaudio/best",
-        "outtmpl": output_path,
-        "quiet": True,
-        "noplaylist": True,
+    "format": "bestaudio",
+    "outtmpl": output_path,
+    "quiet": True,
+    "noplaylist": True,
 
-        "cookiefile": "cookies.txt",
+    "cookiefile": "cookies.txt",
 
-        "http_headers": {
-            "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/122.0.0.0 Safari/537.36"
-            )
-        },
+    "http_headers": {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/122.0.0.0 Safari/537.36"
+        )
+    },
 
-        "postprocessors": [
-            {
-                "key": "FFmpegExtractAudio",
-                "preferredcodec": "wav",
-                "preferredquality": "192",
-            }
-        ],
+    "postprocessors": [
+        {
+            "key": "FFmpegExtractAudio",
+            "preferredcodec": "wav",
+            "preferredquality": "192",
+        }
+    ],
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
